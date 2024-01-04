@@ -1,0 +1,14 @@
+{
+  "name": "javascript-advance",
+  "version": "1.0.0",
+  "description": "we'll learn advance topics in javascript, which will help me to build stornger fundamentals",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Yashraj Thakur",
+  "license": "ISC"
+}
