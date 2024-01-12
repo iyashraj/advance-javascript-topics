@@ -6,34 +6,57 @@
 // 1.) "This" inside global scope
 console.log(this); // globalObject - window, global
 //   conclusion : inside the global scope, "this" keyword refers to the window/global
-// object where JS environment is running. It will vary where you're calling 
+// object where JS environment is running. It will vary where you're calling
 // "this" keyword eg. Mobile,Browser, SmartWatch or any kind of environment.
 
-
 // 2.) "This" inside a function
-// (a) in non strict mode 
+// (a) in non strict mode
 function test(){
     console.log(this)
 }
 test()
-// conslusion : If we're using "this" keyword inside the function, 
+// conslusion : If we're using "this" keyword inside the function,
 // it will return the same window object but when non-strict mode.
 
 // (b) in strict mode
-    "use strict"
-    function test2(){
-        console.log(this)
-    }
-    test2()
+"use strict"
+function test2(){
+    console.log(this)
+}
+test2()
 // conclusion : it winll return undefined
 
 // final conslusion : If the value of "this" keyword inside the function
-// is undefined or null, then it will replaced with globalObject only 
-// in non-strict mode, also known as "'This Substitution", otherwise it 
+// is undefined or null, then it will replaced with globalObject only
+// in non-strict mode, also known as "'This Substitution", otherwise it
 // will retrun the return undefined
 
-// if the function is calls without any reference then it's value is 
+// if the function is calls without any reference then it's value is
 // undefined in strict mode, but if you refer something it will give you result accordingly.
  "use strict"
  test() // undefined
- window.test() // refer to global/window object
+//  window.test() // refer to global/window object
+
+// 3.) this inside the object's method
+
+const student = {
+  name: "yash",
+  printName: function () {
+    console.log(this);
+  },
+};
+
+student.printName();
+
+// conslusion : inside object's method "this" will refer the object
+
+// 4.) call/apply/bind methods (sharing methods)
+
+const student2 = {
+    name: "Shubham"
+}
+
+student.printName.call(student2) // this will refer student2
+
+// 5.)
+
