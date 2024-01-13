@@ -33,7 +33,7 @@ it will return the same window object but when non-strict mode.
     }
     test2()
 conclusion : it winll return undefined
-
+## 1.) "This" Keyword and it's magical worlds
 final conslusion : If the value of "this" keyword inside the function
 is undefined or null, then it will replaced with globalObject only 
 in non-strict mode, also known as "'This Substitution", otherwise it 
